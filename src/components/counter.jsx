@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     count: 0,
-    tags: ["tag1", "tag2", "tag3"],
+    tags: [],
   };
 
   renderTags(){
@@ -18,6 +18,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
+        {this.state.tags.length === 0 && 'Please Create one tag!'}
         {this.renderTags()}
       </div>
     );
